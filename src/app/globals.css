@@ -2,6 +2,7 @@
 
 @theme inline {
     --color-secondary: #6b7280;
+    --breakpoint-sm: 768px;
 }
 
 body {

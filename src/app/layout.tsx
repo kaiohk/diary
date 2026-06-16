@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased bg-black">
       <body
-        className={`${montserrat.className} min-h-full flex justify-center overflow-x-hidden`}
+        className={`${montserrat.className} flex justify-center text-white overflow-x-hidden`}
       >
         {children}
       </body>
