@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-interface WrittingsProps {
+interface WritingsProps {
   title: string;
   description: string;
   date: string;
@@ -9,19 +9,19 @@ interface WrittingsProps {
   slug: string;
 }
 
-export function Writtings({
+export function Writings({
   title,
   description,
   date,
   image,
   imageAlt,
   slug,
-}: WrittingsProps) {
+}: WritingsProps) {
   return (
     <div className="min-w-screen flex justify-center">
-      <Link href="/">
-        <div className="bg-black-600 w-155 pl-4 pr-4 h-60 flex justify-center text-white cursor-pointer transition duration-300 hover:scale-101">
-          <div className="w-full flex flex-col gap-2 mr -10">
+      <Link href={`/posts/${slug}`}>
+        <div className="w-155 pl-4 pr-4 h-60 flex justify-center text-white cursor-pointer transition duration-300 hover:scale-101">
+          <div className="w-full flex flex-col gap-2">
             <h1 className="flex flex-col mt-20 text-white font-bold text-2xl">
               {title}
             </h1>

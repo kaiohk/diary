@@ -1,4 +1,4 @@
-import { Writtings } from "../components/Writtings";
+import { Writings } from "../components/Writings";
 import { posts } from "../app/data/posts";
 
 export default function Page() {
@@ -22,7 +22,7 @@ export default function Page() {
         </div>
       </div>
       {posts.map((post) => (
-        <Writtings key={post.slug} {...post} />
+        <Writings key={post.slug} {...post} />
       ))}
     </div>
   );
