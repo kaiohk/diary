@@ -1,22 +1,54 @@
-"use client";
+import { posts, header } from "../../data/posts";
+import Header from "../../../components/Header";
+import { Highlight } from "../../../components/Highlight";
+import { Quote } from "../../../components/Quote";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import fs from "fs";
+import path from "path";
 
-import { posts } from "../../data/posts";
-import { useParams } from "next/navigation";
+function getPostContent(slug: string) {
+  try {
+    const filePath = path.join(process.cwd(), "src/app/content", `${slug}.mdx`);
+    const content = fs.readFileSync(filePath, "utf-8");
+    return content;
+  } catch {
+    return null;
+  }
+}
 
-export default function PostPage() {
-  const params = useParams<{ slug: string }>();
-  const post = posts.find((p) => p.slug === params.slug);
+type Props = {
+  params: Promise<{ slug: string }>;
+};
 
-  if (!post) {
-    return <div>Post not found</div>;
+export default async function PostPage({ params }: Props) {
+  const resolvedParams = await params;
+  const slug = resolvedParams.slug;
+
+  const post = posts.find((p) => p.slug === slug);
+  const content = getPostContent(slug);
+
+  if (!post || !content) {
+    return <p className="text-white">Post not found.</p>;
   }
 
+  const components = {
+    Highlight,
+    Quote,
+  };
+
   return (
-    <div className="md:text-white md:mt-40 md:max-w-xl md:flex md:flex-col md:gap-6">
-      <h1 className="md:text-3xl md:font-bold">{post.title} </h1>
-      <span className="md:text-secondary">{post.date}</span>
-      <p className="md:text-secondary">{post.description}</p>
-      <img className="md:text-white" src={post.image} alt={post.imageAlt} />
+    <div className="page-transition p-4 sm:p-0 text-white mt-20 md:mt-40 max-w-xl flex flex-col gap-6">
+      <Header
+        title={post.title}
+        description={post.description}
+        date={post.date}
+        image={header[0].image}
+        imageAlt={post.imageAlt}
+      />
+      <img src={post.image} alt={post.imageAlt} />
+      <div className="prose prose-invert mt-3 mb-10 w-full wrap-break-word">
+        <MDXRemote source={content} components={components} />
+      </div>
     </div>
   );
 }
