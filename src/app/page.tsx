@@ -3,7 +3,7 @@ import { posts } from "../app/data/posts";
 
 export default function Page() {
   return (
-    <div className="p-4 sm:p-0 w-full sm:w-155 text-white">
+    <div className="page-transition p-4 sm:p-0 w-full sm:w-155 text-white">
       <div className="w-full mx-auto">
         <div className="mt-40 flex justify-center flex-col">
           <div className="flex justify-center flex-col gap-2">
