@@ -1,11 +1,5 @@
 import { Writings } from "../components/Writings";
 import { posts } from "../app/data/posts";
-import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Diary About You",
-  description: "A diary about you",
-};
 
 export default function Page() {
   return (

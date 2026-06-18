@@ -1,5 +1,11 @@
 import "./globals.css";
 import { Montserrat } from "next/font/google";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Diary About You",
+  description: "A diary about you",
+};
 
 const montserrat = Montserrat({
   weight: ["400", "200", "700"],
