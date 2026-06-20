@@ -37,4 +37,20 @@ export const posts = [
     image: "/images/posts/you.jpg",
     imageAlt: "A cozy coffee by the fireplace.",
   },
+  {
+    slug: "your-vision-about-relationships",
+    title: "Your Vision About Things",
+    description: "Your vision about things in life.",
+    date: "18/06/2026",
+    image: "/images/posts/your-vision-about-relationships.jpg",
+    imageAlt: "A coffee break to read a book.",
+  },
+  {
+    slug: "your-vision-about-future",
+    title: "Your Vision About Things, Pt.2",
+    description: "Your vision about things in life.",
+    date: "19/06/2026",
+    image: "/images/posts/your-vision-about-future.jpg",
+    imageAlt: "A girl looking at the view.",
+  },
 ];
