@@ -25,7 +25,7 @@ export default function Header({
         >
           <img
             src="/arrow-sm-left-svgrepo-com.svg"
-            alt="voltar"
+            alt="back"
             width={25}
             height={25}
           />
