@@ -2,6 +2,7 @@ import { posts, header } from "../../data/posts";
 import Header from "../../../components/Header";
 import { Highlight } from "../../../components/Highlight";
 import { Quote } from "../../../components/Quote";
+import SixthPostImage from "../../../components/SixthPostImage";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import fs from "fs";
 import path from "path";
@@ -10,6 +11,7 @@ import { Metadata } from "next";
 const components = {
   Highlight,
   Quote,
+  SixthPostImage,
 };
 
 type Props = {
