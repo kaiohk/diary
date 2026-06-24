@@ -53,4 +53,12 @@ export const posts = [
     image: "/images/posts/your-vision-about-future.jpg",
     imageAlt: "A girl looking at the view.",
   },
+  {
+    slug: "how-it-started",
+    title: "How It Started",
+    description: "How did we get here?",
+    date: "23/06/2026",
+    image: "/images/posts/how-it-started.jpg",
+    imageAlt: "A cat in near the fireplace.",
+  },
 ];
