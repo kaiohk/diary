@@ -30,11 +30,11 @@ export const posts = [
     imageAlt: "Rainy day",
   },
   {
-    slug: "you",
-    title: "You",
+    slug: "your-little-details",
+    title: "Your Little Details",
     description: "Small (or not) details that I notice about You.",
     date: "17/06/2026",
-    image: "/images/posts/you.jpg",
+    image: "/images/posts/your-little-details.jpg",
     imageAlt: "A cozy coffee by the fireplace.",
   },
   {
@@ -60,5 +60,13 @@ export const posts = [
     date: "23/06/2026",
     image: "/images/posts/how-it-started.jpg",
     imageAlt: "A cat in near the fireplace.",
+  },
+  {
+    slug: "you",
+    title: "You",
+    description: "You are more than you think.",
+    date: "27/06/2026",
+    image: "/images/posts/you.jpg",
+    imageAlt: "A library",
   },
 ];
