@@ -67,6 +67,14 @@ export const posts = [
     description: "You are more than you think.",
     date: "27/06/2026",
     image: "/images/posts/you.jpg",
-    imageAlt: "A library",
+    imageAlt: "A library.",
+  },
+  {
+    slug: "a-day-with-you",
+    title: "A day with you",
+    description: "It had been a long time since I felt so comfortable.",
+    date: "04/07/2026",
+    image: "/images/posts/a-day-with-you.jpg",
+    imageAlt: "Blurred figures in the light.",
   },
 ];
