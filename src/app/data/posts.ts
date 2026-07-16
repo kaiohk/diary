@@ -77,4 +77,12 @@ export const posts = [
     image: "/images/posts/a-day-with-you.jpg",
     imageAlt: "Blurred figures in the light.",
   },
+  {
+    slug: "little-thoughts-about-you",
+    title: "Little Thoughts About You",
+    description: "Some thoughts about you.",
+    date: "15/07/2026",
+    image: "/images/posts/little-thoughts-about-you.jpg",
+    imageAlt: "Sunny day with a view to the water and moutains.",
+  },
 ];
